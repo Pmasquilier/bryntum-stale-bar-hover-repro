@@ -1,0 +1,16 @@
+{
+  "name": "bryntum-stale-bar-hover-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "repro": "node repro.mjs"
+  },
+  "dependencies": {
+    "@bryntum/schedulerpro": "7.3.7"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0",
+    "vite": "^7.0.0"
+  }
+}

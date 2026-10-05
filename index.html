@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hovering an event bar while the resource store shrinks</title>
+    <link rel="stylesheet" href="/node_modules/@bryntum/schedulerpro/schedulerpro.css">
+    <link rel="stylesheet" href="/node_modules/@bryntum/schedulerpro/material3-light.css">
+    <style>
+        body { margin: 0; font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; }
+        header { padding: 8px 12px; border-bottom: 1px solid #ddd; }
+        kbd { background: #eee; border: 1px solid #ccc; border-radius: 3px; padding: 0 4px; font-family: inherit; }
+        #container { flex: 1; min-height: 0; }
+        #log { height: 150px; overflow: auto; margin: 0; padding: 8px 12px; background: #f6f6f6; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <header>
+        Rest the pointer on an event bar <b>below the first row</b>, press <kbd>N</kbd>, then keep moving it
+        by a pixel or two for a few seconds. <kbd>R</kbd> stops and reloads the full data set.
+        <br>
+        <small>
+            <kbd>N</kbd> stands in for a filter narrowing the result set: it replaces both stores with a single
+            resource, then puts the full set back, over and over. It is a key rather than a button because reaching
+            for a button would move the pointer off the bar, and the pointer staying put is the whole point.
+        </small>
+    </header>
+    <div id="container"></div>
+    <pre id="log"></pre>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
